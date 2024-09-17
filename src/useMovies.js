@@ -5,6 +5,7 @@ export function useMovies(query) {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  const KEY = 'c81b3bbe';
 
   useEffect(
     function () {
@@ -15,7 +16,7 @@ export function useMovies(query) {
           setIsLoading(true);
           setErrorMessage("");
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${query}`,
+            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal }
           );
           if (!res.ok) throw new Error("Failed while fetching");
