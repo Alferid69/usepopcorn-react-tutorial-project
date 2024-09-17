@@ -5,11 +5,9 @@ export function useMovies(query) {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  console.log(process.env)
 
   useEffect(
     function () {
-      // callBack?.();
 
       const controller = new AbortController();
       async function fetchMovies() {
