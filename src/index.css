@@ -49,12 +49,41 @@ body {
   justify-content: center;
 }
 
+@media only screen and (max-width: 690px) {
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-bar > .num-results {
+    font-size: 10px;
+    text-align: center;
+  }
+  .nav-bar > .logo {
+    display: none;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .box{
+    width: 100%;
+    
+  }
+  .box:first-child{
+    min-height: 19rem;
+  }
+}
+
 .box {
   width: 42rem;
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
 }
 
